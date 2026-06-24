@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+    background-color: #121212;
+    color: #E0E0E0;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+h3,
+h5,
+.main-content h2 {
+    margin: 5px;
+    text-align: center;
+}
+
+.artists-class,
+.albums-class {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.albums-class {
+    gap: 8px;
+}
+
+.artists-class img {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    transition: all 0.2s ease-in-out;
+    user-select: none;
+    border-radius: 25px;
+}
+
+.albums-class img {
+    height: 70px;
+    width: 70px;
+    object-fit: cover;
+    transition: all 0.2s ease-in-out;
+    user-select: none;
+    border-radius: 8px;
+}
+
+.artists-class img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.artists-class img:active {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.artists-class:has(img:hover, img:active) img:not(:hover):not(:active) {
+    filter: grayscale(75%);
+    transform: scale(0.9);
+}
+
+.main-content:has(.artists-class div:hover) .album img:not(:hover):not(:active) {
+    filter: grayscale(75%);
+    transform: scale(0.9);
+}
+
+.main-content:has(.beabadobee:hover) .beabadobee-album img {
+    filter: grayscale(0%) !important;
+    transform: scale(1.1) !important;
+}
+
+.main-content:has(.lizzymcalpine:hover) .lizzymcalpine-album img {
+    filter: grayscale(0%) !important;
+    transform: scale(1.1) !important;
+}
