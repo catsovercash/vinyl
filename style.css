@@ -66,12 +66,7 @@ h5,
     transform: scale(0.9);
 }
 
-.main-content:has(.beabadobee:hover) .beabadobee-album img {
-    filter: grayscale(0%) !important;
-    transform: scale(1.1) !important;
-}
-
-.main-content:has(.lizzymcalpine:hover) .lizzymcalpine-album img {
+.album.highlight img {
     filter: grayscale(0%) !important;
     transform: scale(1.1) !important;
 }
